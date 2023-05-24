@@ -1,0 +1,16 @@
+version: '1'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: dbingredient
+    ports:
+      - 5432:5432
+    volumes:
+      - dbingredient_data:/var/lib/postgresql/data
+
+volumes:
+  dbingredient_data:
